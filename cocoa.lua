@@ -62,6 +62,7 @@ minetest.register_craftitem("farming:cocoa_beans", {
 	on_place = function(itemstack, placer, pointed_thing)
 		return place_cocoa(itemstack, placer, pointed_thing, "farming:cocoa_1")
 	end,
+	spoil=60,
 })
 
 minetest.register_craft( {
@@ -76,6 +77,7 @@ minetest.register_craftitem("farming:cookie", {
 	description = S("Cookie"),
 	inventory_image = "farming_cookie.png",
 	on_use = minetest.item_eat(2),
+	spoil=5,
 })
 
 minetest.register_craft( {
@@ -90,6 +92,7 @@ minetest.register_craftitem("farming:chocolate_dark", {
 	description = S("Bar of Dark Chocolate"),
 	inventory_image = "farming_chocolate_dark.png",
 	on_use = minetest.item_eat(3),
+	spoil=60,
 })
 
 minetest.register_craft( {

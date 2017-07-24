@@ -17,12 +17,14 @@ minetest.register_node("farming:seed_wheat", {
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:wheat_1")
 	end,
+	spoil=60,
 })
 
 -- harvested wheat
 minetest.register_craftitem("farming:wheat", {
 	description = S("Wheat"),
 	inventory_image = "farming_wheat.png",
+	spoil=60,
 })
 
 -- straw
@@ -54,6 +56,7 @@ minetest.register_craft({
 minetest.register_craftitem("farming:flour", {
 	description = S("Flour"),
 	inventory_image = "farming_flour.png",
+	spoil=60,
 })
 
 minetest.register_craft({
@@ -67,6 +70,7 @@ minetest.register_craftitem("farming:bread", {
 	description = S("Bread"),
 	inventory_image = "farming_bread.png",
 	on_use = minetest.item_eat(5),
+	spoil=8,
 })
 
 minetest.register_craft({

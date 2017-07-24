@@ -65,6 +65,7 @@ minetest.register_craftitem("farming:beans", {
 	description = S("Green Beans"),
 	inventory_image = "farming_beans.png",
 	on_use = minetest.item_eat(1),
+	spoil=5,
 
 	on_place = function(itemstack, placer, pointed_thing)
 		return place_beans(itemstack, placer, pointed_thing, "farming:beanpole_1")

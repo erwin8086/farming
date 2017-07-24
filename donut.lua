@@ -6,6 +6,7 @@ minetest.register_craftitem("farming:donut", {
 	description = S("Donut"),
 	inventory_image = "farming_donut.png",
 	on_use = minetest.item_eat(4),
+	spoil=2,
 })
 
 minetest.register_craft({
@@ -22,6 +23,7 @@ minetest.register_craftitem("farming:donut_chocolate", {
 	description = S("Chocolate Donut"),
 	inventory_image = "farming_donut_chocolate.png",
 	on_use = minetest.item_eat(6),
+	spoil=2,
 })
 
 minetest.register_craft({
@@ -37,6 +39,7 @@ minetest.register_craftitem("farming:donut_apple", {
 	description = S("Apple Donut"),
 	inventory_image = "farming_donut_apple.png",
 	on_use = minetest.item_eat(6),
+	spoil=2,
 })
 
 minetest.register_craft({

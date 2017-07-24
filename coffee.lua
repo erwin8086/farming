@@ -8,6 +8,7 @@ minetest.register_craftitem("farming:coffee_beans", {
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:coffee_1")
 	end,
+	spoil=60,
 })
 
 
@@ -52,6 +53,7 @@ minetest.register_node("farming:coffee_cup", {
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 	on_use = minetest.item_eat(2, "farming:drinking_cup"),
 	sounds = default.node_sound_glass_defaults(),
+	spoil=1,
 })
 
 minetest.register_craft( {
@@ -85,6 +87,7 @@ minetest.register_node("farming:coffee_cup_hot", {
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 	on_use = minetest.item_eat(3, "farming:drinking_cup"),
 	sounds = default.node_sound_glass_defaults(),
+	spoil=1,
 })
 
 -- coffee definition

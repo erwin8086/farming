@@ -23,6 +23,7 @@ else
 		groups = {fleshy = 3, dig_immediate = 3, flammable = 2},
 		on_use = minetest.item_eat(2),
 		sounds = default.node_sound_leaves_defaults(),
+		spoil=5,
 	})
 
 	minetest.register_alias("farming_plus:banana_sapling", "default:sapling")
@@ -71,6 +72,7 @@ else
 		groups = {fleshy = 3, dig_immediate = 3, flammable = 2},
 		on_use = minetest.item_eat(4),
 		sounds = default.node_sound_leaves_defaults(),
+		spoil=5,
 	})
 
 	minetest.register_alias("farming_plus:orange_item", "ethereal:orange")

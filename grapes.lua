@@ -64,6 +64,7 @@ minetest.register_craftitem("farming:grapes", {
 	on_place = function(itemstack, placer, pointed_thing)
 		return place_grapes(itemstack, placer, pointed_thing, "farming:grapes_1")
 	end,
+	spoil=5,
 })
 
 -- grapes can be used for violet dye

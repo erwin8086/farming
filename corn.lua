@@ -14,6 +14,7 @@ minetest.register_craftitem("farming:corn", {
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:corn_1")
 	end,
 	on_use = minetest.item_eat(3),
+	spoil=5,
 })
 
 -- corn on the cob (texture by TenPlus1)
@@ -21,6 +22,7 @@ minetest.register_craftitem("farming:corn_cob", {
 	description = S("Corn on the Cob"),
 	inventory_image = "farming_corn_cob.png",
 	on_use = minetest.item_eat(5),
+	spoil=2,
 })
 
 minetest.register_craft({
@@ -46,6 +48,7 @@ minetest.register_node("farming:bottle_ethanol", {
 	},
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 	sounds = default.node_sound_glass_defaults(),
+	spoil=60,
 })
 
 minetest.register_craft( {

@@ -14,6 +14,7 @@ minetest.register_craftitem("farming:carrot", {
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:carrot_1")
 	end,
 	on_use = minetest.item_eat(4),
+	spoil=5,
 })
 
 -- golden carrot
@@ -21,6 +22,7 @@ minetest.register_craftitem("farming:carrot_gold", {
 	description = S("Golden Carrot"),
 	inventory_image = "farming_carrot_gold.png",
 	on_use = minetest.item_eat(6),
+	spoil=10,
 })
 
 minetest.register_craft({

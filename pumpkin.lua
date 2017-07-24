@@ -23,6 +23,7 @@ minetest.register_node("farming:pumpkin", {
 		}
 	},
 	sounds = default.node_sound_wood_defaults(),
+	spoil=5,
 })
 
 -- pumpkin slice
@@ -33,6 +34,7 @@ minetest.register_craftitem("farming:pumpkin_slice", {
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:pumpkin_1")
 	end,
 	on_use = minetest.item_eat(2),
+	spoil=5,
 })
 
 minetest.register_craft({
@@ -107,12 +109,14 @@ minetest.register_craft({
 minetest.register_craftitem("farming:pumpkin_bread", {
 	description = S("Pumpkin Bread"),
 	inventory_image = "farming_pumpkin_bread.png",
-	on_use = minetest.item_eat(8)
+	on_use = minetest.item_eat(8),
+	spoil=8,
 })
 
 minetest.register_craftitem("farming:pumpkin_dough", {
 	description = S("Pumpkin Dough"),
 	inventory_image = "farming_pumpkin_dough.png",
+	spoil=2,
 })
 
 minetest.register_craft({

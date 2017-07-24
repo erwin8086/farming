@@ -9,6 +9,7 @@ minetest.register_craftitem("farming:melon_slice", {
 		return farming.place_seed(itemstack, placer, pointed_thing, "farming:melon_1")
 	end,
 	on_use = minetest.item_eat(2),
+	spoil=5,
 })
 
 minetest.register_craft({
@@ -41,7 +42,8 @@ local crop_def = {
 		snappy = 3, flammable = 2, plant = 1, attached_node = 1,
 		not_in_creative_inventory = 1, growing = 1
 	},
-	sounds = default.node_sound_leaves_defaults()
+	sounds = default.node_sound_leaves_defaults(),
+	spoil=5,
 }
 
 -- stage 1
