@@ -73,7 +73,7 @@ minetest.register_node("farming:jackolantern", {
 	end,
 })
 
-minetest.register_node("farming:jackolantern_on", {
+light.register_light("farming:jackolantern_on", {
 	tiles = {
 		"farming_pumpkin_top.png",
 		"farming_pumpkin_top.png",
@@ -82,6 +82,10 @@ minetest.register_node("farming:jackolantern_on", {
 		"farming_pumpkin_side.png",
 		"farming_pumpkin_face_on.png"
 	},
+	-- for light
+	power_type="fuel",
+	burntime=10,
+
 	light_source = default.LIGHT_MAX - 1,
 	paramtype2 = "facedir",
 	groups = {
